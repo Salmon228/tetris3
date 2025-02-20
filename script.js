@@ -82,6 +82,7 @@ function updateLeaderboard() {
 }
 
 // Остальной код игры (создание фигур, движение, поворот и т.д.)
+// ... (используй код из предыдущего ответа для реализации логики игры)
 function createPiece() {
     const id = Math.floor(Math.random() * shapes.length);
     return {
@@ -213,11 +214,6 @@ document.addEventListener('keydown', (event) => {
     if (event.key === 'ArrowUp') rotate();
     if (event.key === 'ArrowDown') drop();
 });
-
-//spawnPiece();
-//update();
-//setInterval(drop, 1000);
-// ... (используй код из предыдущего ответа для реализации логики игры)
 
 // Запуск игры
 spawnPiece();
