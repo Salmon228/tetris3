@@ -82,30 +82,6 @@ function updateLeaderboard() {
 }
 
 // Остальной код игры (создание фигур, движение, поворот и т.д.)
-const canvas = document.getElementById('tetris');
-const context = canvas.getContext('2d');
-const grid = 30; // Размер клетки
-const rows = canvas.height / grid;
-const cols = canvas.width / grid;
-
-let score = 0;
-let board = Array.from({ length: rows }, () => Array(cols).fill(0));
-
-const shapes = [
-    [[1, 1, 1, 1]], // I
-    [[1, 1], [1, 1]], // O
-    [[0, 1, 0], [1, 1, 1]], // T
-    [[1, 0, 0], [1, 1, 1]], // L
-    [[0, 0, 1], [1, 1, 1]], // J
-    [[0, 1, 1], [1, 1, 0]], // S
-    [[1, 1, 0], [0, 1, 1]] // Z
-];
-
-const colors = ['#ff4757', '#2ed573', '#1e90ff', '#ffa502', '#ff6b81', '#ff6348', '#7bed9f'];
-
-let currentPiece;
-let currentX, currentY;
-
 function createPiece() {
     const id = Math.floor(Math.random() * shapes.length);
     return {
