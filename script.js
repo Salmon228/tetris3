@@ -198,3 +198,24 @@ document.addEventListener('keydown', (event) => {
 spawnPiece();
 update();
 setInterval(drop, 1000);
+// Добавить в конец файла script.js
+function updateLeaderboard() {
+    const leaderboard = JSON.parse(localStorage.getItem('tetrisLeaderboard') || '[]');
+    const list = document.getElementById('leaderboardList');
+    list.innerHTML = leaderboard
+        .map((entry, index) => `
+            <div class="leaderboard-item">
+                <span>${index + 1}. ${entry.name}</span>
+                <span>${entry.score}</span>
+            </div>
+        `)
+        .join('');
+}
+
+// Вызывать updateLeaderboard() при запуске и после сохранения счета
+window.onload = function() {
+    if (!playerName) {
+        document.getElementById('registrationModal').style.display = 'block';
+    }
+    updateLeaderboard(); // Добавить эту строку
+};
