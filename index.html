@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div id="registrationModal" class="modal">
+    <div class="modal-content">
+        <h2>Регистрация</h2>
+        <input type="text" id="playerName" placeholder="Введите ваше имя" maxlength="20">
+        <button onclick="savePlayerName()">Начать игру</button>
+    </div>
+</div>
     <div class="game-container">
         <h1>Мини-Тетрис</h1>
         <div class="score">Счет: <span id="score">0</span></div>
