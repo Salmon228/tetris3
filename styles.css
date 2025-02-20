@@ -31,6 +31,7 @@ canvas {
 
 .controls {
     margin-top: 20px;
+}
     
 .modal {
     display: none;
@@ -61,7 +62,7 @@ canvas {
     margin: 10px 0;
     font-size: 16px;
 }
-}
+
 
 button {
     background-color: #007bff;
