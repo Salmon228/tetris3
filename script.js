@@ -181,6 +181,8 @@ function rotate() {
 function drop() {
     movePiece(0, 1);
 }
+const urlParams = new URLSearchParams(window.location.search);
+const telegramUserId = urlParams.get('user_id');
 
 function update() {
     drawBoard();
