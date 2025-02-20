@@ -186,6 +186,9 @@ function update() {
     drawBoard();
     requestAnimationFrame(update);
 }
+function showNameModal() {
+    document.getElementById('registrationModal').style.display = 'block';
+}
 
 // Обработка клавиш клавиатуры
 document.addEventListener('keydown', (event) => {
