@@ -191,6 +191,13 @@ function update() {
 function showNameModal() {
     document.getElementById('registrationModal').style.display = 'block';
 }
+window.onload = function() {
+    if (!playerName) {
+        document.getElementById('registrationModal').style.display = 'block';
+    }
+    updateLeaderboard(); // Добавить эту строку
+};
+
 
 // Обработка клавиш клавиатуры
 document.addEventListener('keydown', (event) => {
@@ -217,10 +224,3 @@ function updateLeaderboard() {
         .join('');
 }
 
-// Вызывать updateLeaderboard() при запуске и после сохранения счета
-window.onload = function() {
-    if (!playerName) {
-        document.getElementById('registrationModal').style.display = 'block';
-    }
-    updateLeaderboard(); // Добавить эту строку
-};
