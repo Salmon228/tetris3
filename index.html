@@ -3,24 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мини-Тетрис</title>
+    <title>Тетрис с рейтингом</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <button onclick="showNameModal()">Сменить имя</button>
-    <div class="leaderboard">
-    <h3>Таблица рекордов</h3>
-    <div id="leaderboardList"></div>
-</div>
+    <!-- Модальное окно для регистрации -->
     <div id="registrationModal" class="modal">
-    <div class="modal-content">
-        <h2>Регистрация</h2>
-        <input type="text" id="playerName" placeholder="Введите ваше имя" maxlength="20">
-        <button onclick="savePlayerName()">Начать игру</button>
+        <div class="modal-content">
+            <h2>Регистрация</h2>
+            <input type="text" id="playerName" placeholder="Введите ваше имя" maxlength="20">
+            <button onclick="savePlayerName()">Начать игру</button>
+        </div>
     </div>
-</div>
+
+    <!-- Основной интерфейс игры -->
     <div class="game-container">
-        <h1>Мини-Тетрис</h1>
+        <h1>Тетрис с рейтингом</h1>
         <div class="score">Счет: <span id="score">0</span></div>
         <canvas id="tetris" width="300" height="600"></canvas>
         <div class="controls">
@@ -28,7 +26,12 @@
             <button onclick="rotate()">↻ Поворот</button>
             <button onclick="moveRight()">→ Вправо</button>
         </div>
+        <div class="leaderboard">
+            <h3>Таблица рекордов</h3>
+            <div id="leaderboardList"></div>
+        </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
